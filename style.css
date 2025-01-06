@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "sage-range";
+    src: url(fonts/Sagerange.otf);
+  }
+
+@font-face {
+    font-family: "redeyes";
+    src: url(Fonts/Redeyes.otf);
+}
+
+@font-face {
+    font-family: "funkrocker";
+    src: url(Fonts/Funkrocker.otf);
+}
+
+@font-face {
+    font-family: "freakshow";
+    src: url(Fonts/Freakshow.otf);
+}
+
+@font-face {
+    font-family: "maskdown";
+    src: url(Fonts/Maskdown.ttf);
+}
+
+body{
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+
+#Home {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh;
+    justify-content: center; 
+}
+
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 95%;
+    padding: 10px 50px; 
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 50px; 
+    font-family: "sage-range";
+  }
+  
+  .nav-elements ul {
+    display: flex; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    gap: 20px;
+  }
+  
+  .nav-elements li {
+    margin: 0 10px;
+
+  }
+
+  .nav-elements a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .mirror {
+    display: inline-block;
+    transform: scaleX(-1);  
+  }
+
+  .name h1 {
+    font-size: 48px; 
+    font-family: "freakshow"; 
+    text-align: center; 
+    padding-top: 100px;
+    margin: 0; 
+    color: whitesmoke;
+  }
