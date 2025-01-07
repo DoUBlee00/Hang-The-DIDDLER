@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "sage-range";
+    font-family: "sagerange";
     src: url(fonts/Sagerange.otf);
   }
 
@@ -19,17 +19,31 @@
 }
 
 @font-face {
-    font-family: "maskdown";
-    src: url(Fonts/Maskdown.ttf);
+    font-family: "pixel_grid";
+    src: url(Fonts/Pixel_Grid.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+
 body{
-    scroll-behavior: smooth;
     background-color: black;
+    overflow-y: hidden;
 }
 
 
 #Home {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh;
+    justify-content: center; 
+}
+
+#PlayNow{
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -52,7 +66,7 @@ body{
   .title {
     margin: 0;
     font-size: 50px; 
-    font-family: "sage-range";
+    font-family: "sagerange";
   }
   
   .nav-elements ul {
@@ -60,7 +74,7 @@ body{
     list-style: none; 
     margin: 0; 
     padding: 0; 
-    gap: 20px;
+    gap: 10px;
   }
   
   .nav-elements li {
@@ -69,10 +83,13 @@ body{
   }
 
   .nav-elements a {
+    font-family: pixel_grid;
+    font-size: 13px;
     text-decoration: none;
     color: rgb(255, 255, 255);
+    display: inline-block;
   }
-  
+
   .mirror {
     display: inline-block;
     transform: scaleX(-1);  
@@ -85,4 +102,147 @@ body{
     padding-top: 100px;
     margin: 0; 
     color: whitesmoke;
+    padding-bottom: 40px;
+    padding-top: 200px;
   }
+
+  .name a {
+    font-family: funkrocker;
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 23px;
+    margin-left: 200px;
+    padding: 10px;
+    border: 1.9px solid whitesmoke;
+    transition: transform 0.2s ease, background-color 0.5s ease;  
+}
+
+  .name a:hover {
+    background-color: whitesmoke;
+    color: black;
+    transform: scale(1.1); 
+    }
+
+   
+  .play-now-heading {
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: opacity 0.1s ease, transform 0.6s ease;  
+    top: 0px;
+  }
+ 
+  .play-now-heading.visible {
+    opacity: 1;  
+    transform: translateY(-20px);  
+    color: white;
+    font-family: "freakshow";
+    position: relative;
+    top: -40%;
+    font-size: 30px;
+  }
+
+
+  .game-container {
+    background-color: #000000;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: funkrocker;
+    margin-right: 60px;
+  }
+  
+  .hangman-container img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  #word-display {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: white;
+}
+  
+  .letters {
+    margin: 20px 0;
+  }
+  
+  #letters-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .letters button {
+    font-family: pixel_grid;
+    font-size: 16px;
+    padding: 15.2px;
+    margin: 5px;
+    background-color: #000000;
+    color: white;
+    border: 0.5px solid white;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.5s ease;
+  }
+
+  .letters button:hover {
+    background-color: #ffffff;
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  .letters button:disabled {
+    background-color: #bdc3c7;
+  }
+  
+  .game-status {
+    margin-top: 20px;
+  }
+  
+  #incorrect-guesses {
+    color: red;
+  }
+  
+  #reset-button {
+    font-family: pixel_grid;
+    background-color: #20ff45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.5s ease;
+  }
+  
+  #reset-button:hover {
+    background-color: #0989d3;
+    transform: scale(1.1);
+  }
+
+  #hangman-image{
+    display: none;
+  }
+
+  .footer {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: absolute;
+    padding: 10px 0;
+    bottom: 0px;
+    width: 100%;
+    font-family: Arial, sans-serif;  
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
