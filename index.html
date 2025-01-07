@@ -5,24 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hang The DIDDLER</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section id="Home">
-        <div class="nav-bar">
-            <p class="title">D O U B<span class="mirror">L E O O</span></p>
-            <nav class="nav-elements">
-              <ul>
-                <li><a href="#Sound">Sound</a></li>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#PlayNow">Play Now</a></li>
-                <li><a href="#About">About</a></li>
-              </ul>
-            </nav>
-          </div>
+      <section id="Home">
+          <div class="nav-bar">
+              <p class="title">D O U B<span class="mirror">L E O O</span></p>
+              <nav class="nav-elements">
+                <ul>
+                  <li><a href="#Sound">Sound</a></li>
+                  <li><a href="#Home">Home</a></li>
+                  <li><a href="#PlayNow">Play Now</a></li>
+                  <li><a href="#About">About</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="name">
+              <h1 class="subname">HANG THE DIDDLER</h1>
+              <a href="#PlayNow">Play Now</a>
+            </div>
+      </section>
 
-          <div class="name">
-            <h1>HANG THE DIDDLER</h1>
+      <section id="PlayNow">
+          <div class="heading">
+            <h1 class="play-now-heading">HANG THE DIDDLER</h1>
           </div>
-    </section>
+          <div class="game-container">
+              <div class="hangman-container">
+                  <img id="hangman-image" src="Assets/black.png" alt="Hangman">
+              </div>
+              
+              <p id="word-display">_ _ _ _ _</p>
+              
+              <div class="letters">
+                  <p style="color: white;">Guess a letter:</p>
+                  <div id="letters-container">
+                      <!-- Letter buttons will be added here -->
+                  </div>
+              </div>
+              
+              <div class="game-status">
+                  <p style="color: white;font-size: 20px;">Incorrect guesses: <span id="incorrect-guesses">0</span></p>
+                  <button id="reset-button">Reset Game</button>
+              </div>
+          </div>
+          <div id="message" class="hidden">This mf did nothing on this project tho</div>
+          <div class="footer">
+            <p>© 2024, <a href="https://github.com/DoUBlee00">DoUBlee00</a> | <a href="https://github.com/wtfPrethiv">wtfPrethiv</a> && <a href="https://github.com/subxray" id="raysist">subxray</a></p>
+          </div>
+      </section>
+
+    <script src="script.js"></script> 
 </body>
 </html>
