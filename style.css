@@ -23,6 +23,13 @@
     src: url(Fonts/Pixel_Grid.ttf);
 }
 
+body, html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    font-smooth: always;
+}
+
+
 html {
   scroll-behavior: smooth;
   overflow-y: hidden;
@@ -32,6 +39,8 @@ html {
 body{
     background-color: black;
     overflow-y: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 
