@@ -132,40 +132,34 @@ let guessedLetters = [];
  document.getElementById('reset-button').addEventListener('click', resetGame);
 
 
-// Get the element where you want to add the hover effect
-const raysist = document.getElementById('raysist');
+ const raysist = document.getElementById('raysist');
 
-// Create a message element
-const message = document.createElement('div');
+ const message = document.createElement('div');
 message.textContent = 'This mf did nothing on this project tho';
 message.style.position = 'absolute';
 message.style.backgroundColor = 'white';
 message.style.color = 'black';
 message.style.padding = '5px';
-message.style.borderRadius = '0px'; // Added some rounding to make it look better
-message.style.visibility = 'hidden'; // Initially hidden
-message.style.opacity = '0'; // Start fully transparent
-message.style.transition = 'opacity 0.3s ease, transform 0.3s ease'; // Smooth transition for fade and position
-message.style.transform = 'translateY(10px)'; // Start slightly lower for animation effect
+message.style.borderRadius = '0px';  
+message.style.visibility = 'hidden';  
+message.style.opacity = '0';  
+message.style.transition = 'opacity 0.3s ease, transform 0.3s ease';  
+message.style.transform = 'translateY(10px)';  
 
-// Append the message to the body
-document.body.appendChild(message);
+ document.body.appendChild(message);
 
-// Add hover event listeners
-raysist.addEventListener('mouseenter', () => {
-  // Position the message above the element and make it visible
-  const rect = raysist.getBoundingClientRect();
-  message.style.left = `${rect.left + rect.width / 2 - message.offsetWidth / 2}px`; // Center the message horizontally
-  message.style.top = `${rect.top - message.offsetHeight - 10}px`; // Position the message higher above
+ raysist.addEventListener('mouseenter', () => {
+   const rect = raysist.getBoundingClientRect();
+  message.style.left = `${rect.left + rect.width / 2 - message.offsetWidth / 2}px`;  
+  message.style.top = `${rect.top - message.offsetHeight - 10}px`;  
   message.style.visibility = 'visible';
-  message.style.opacity = '1'; // Fully visible
-  message.style.transform = 'translateY(0)'; // Reset transform for smooth movement
+  message.style.opacity = '1';  
+  message.style.transform = 'translateY(0)'; 
 });
 
 raysist.addEventListener('mouseleave', () => {
-  // Hide the message and reset the animation
-  message.style.visibility = 'hidden';
-  message.style.opacity = '0'; // Fade out
-  message.style.transform = 'translateY(10px)'; // Move back down slightly
+   message.style.visibility = 'hidden';
+  message.style.opacity = '0';  
+  message.style.transform = 'translateY(10px)'; 
 });
 
